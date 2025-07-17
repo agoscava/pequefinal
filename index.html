@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla Visible - Belluccia 3</title>
+
+    <!-- Tipografía desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Framework CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR: Menú de navegación fijo superior -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo o nombre del sitio -->
+            <a class="navbar-brand" href="#">PequePlan</a>
+            <!-- Botón para mostrar menú en mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Ítems del menú -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pequecajas">Pequecajas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle2.html">Suscripción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <!-- HERO: Sección de portada con llamado a la acción -->
+    <section id="hero" class="section-spacing container d-flex align-items-center justify-content-between" style="min-height: 100vh; padding-top: 100px;">
+        <div class="row align-items-center">
+            <!-- Texto principal -->
+            <div class="col-lg-6">
+                <h1 class="h1-custom">Resolvemos tu plan de actividades</h1>
+                <p class="p-custom">Ideales para jugar y aprender con los mas pequeños de la familia.</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#pequecajas" class="btn btn-dark">Suscribirme</a>
+                    <a href="#nosotros" class="btn btn-outline-dark">Saber más</a>
+                </div>
+            </div>
+            <!-- Imagen destacada -->
+            <div class="col-lg-6 text-center">
+                <img src="images/herononube.png" class="img-fluid img-rounded" alt="Imagen Hero">
+            </div>
+        </div>
+    </section>
+    <!-- /HERO -->
+    <!-- SECCIÓN personalizada: Nosotros figma -->
+    <section id="nosotros" class="nosotros">
+        <div class="contenedor-nosotros">
+            <div class="imagen-nosotros">
+                <img src="images/nosotroscirculo.png" class="img-full-left" alt="Madre e hija pintando">
+            </div>
+            <div class="texto-nosotros">
+                <h2>Un poco de nosotros...</h2>
+                <p>
+                    En PequePlan creemos que los mejores aprendizajes suceden cuando los niños exploran,
+                    crean y se divierten en familia. Por eso diseñamos un sistema de suscripción quincenal
+                    que lleva hasta la puerta de tu casa cajas llenas de experiencias pensadas para estimular
+                    la curiosidad, la creatividad y el descubrimiento.
+                </p>
+                <img src="images/herofondovershort" class="img-fluid img-rounded w-100 rounded" alt="Imagen 1">
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN FIGMA NOSOTROS-->
+    <!-- SECCIÓN personalizada: Beneficios figma con íconos centrados (Bootstrap Icons) -->
+    <section class="beneficios">
+        <h2>¿Cuáles son los beneficios de PequePlan?</h2>
+        <div class="beneficio-lista">
+            <div class="beneficio-item">
+                <div class="icono" style="background-color: #F58220;">
+                    <i class="bi bi-rainbow"></i>
+                </div>
+                <h3>Estimula la creatividad</h3>
+                <p>Cada caja propone actividades artísticas que permiten a los niños expresarse libremente.</p>
+            </div>
+            <div class="beneficio-item">
+                <div class="icono" style="background-color: #B5D655;">
+                    <i class="bi bi-book"></i>
+                </div>
+                <h3>Promueve el aprendizaje</h3>
+                <p>Con experimentos sencillos se despierta su interés natural por descubrir el mundo que los rodea.</p>
+            </div>
+            <div class="beneficio-item">
+                <div class="icono" style="background-color: #EC88E5;">
+                    <i class="bi bi-house-heart-fill"></i>
+                </div>
+                <h3>Refuerza los lazos familiares</h3>
+                <p>Los niños encuentran en sus padres la confianza para contar con ellos en su desarrollo.</p>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN personalizada Beneficios -->
+    <!-- PLANES DE SUSCRIPCIÓN: Sección con 3 opciones destacadas -->
+    <section id="pequecajas" class="section-spacing container text-center suscripcion-bg">
+        <h2 class="h2-custom">Planes de Suscripción</h2>
+        <p class="p-custom">Elegí el plan que mejor se adapta a tus necesidades. Cada uno incluye diferentes beneficios pensados para vos.</p>
+        <div class="row mt-5">
+
+            <!-- Card: Plan Básico -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <!-- Título y precio -->
+                    <h5 class="text-uppercase">Peque Inicial</h5>
+                    <p class="display-6 text-primary">$25.000 <small>/ quincena</small></p>
+
+                    <!-- Imagen ilustrativa -->
+                    <img src="images/caja2.png" class="img-fluid img-rounded my-3" alt="Plan Básico">
+
+                    <!-- Descripción -->
+                    <p class="p-custom">Perfecto para empezar.<br><strong>Incluye:</strong></p>
+
+                    <!-- Lista de beneficios -->
+                    <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                        <li>✔ Una actividad aleatoria</li>
+                        <li>✔ Guía para padres</li>
+                        <li>✔ Cuento infantil</li>
+                        <li>✔ Dibujo para colorear</li>
+                        <li>✔ Calendario de actividades</li>
+                        <li>✔ Beneficio PequePlan con librerias y jugueterias</li>
+                    </ul>
+
+                    <!-- Botón CTA -->
+                    <a href="#" class="btn btn-primary mt-3">Elegir plan</a>
+                </div>
+            </div>
+
+            <!-- Card: Plan Pro (Recomendado) -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100 border border-primary">
+                    <!-- Título y precio -->
+                    <h5 class="text-uppercase">Peque Creativo <span class="badge bg-primary ms-2">Recomendado</span></h5>
+                    <p class="display-6 text-primary">$35.000 <small>/ quincena</small></p>
+
+                    <!-- Imagen ilustrativa -->
+                    <img src="images/caja1.png" class="img-fluid img-rounded my-3" alt="Plan Pro">
+
+                    <!-- Descripción -->
+                    <p class="p-custom">Ideal para quienes buscan más.<br><strong>Incluye:</strong></p>
+
+                    <!-- Lista de beneficios -->
+                    <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                        <li>✔ Dos actividades aleatorias (de diferentes areas)</li>
+                        <li>✔ Guia para padres</li>
+                        <li>✔ Cuento infantil</li>
+                        <li>✔ Dibujo para colorear</li>
+                        <li>✔ Calendarios de actividades (de ambas areas)</li>
+                        <li>✔ Beneficio PequePlan con librerias y jugueterias</li>
+                    </ul>
+
+                    <!-- Botón CTA -->
+                    <a href="detalle2.html" class="btn btn-primary mt-3">Elegir plan</a>
+                </div>
+            </div>
+
+            <!-- Card: Plan Full -->
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <!-- Título y precio -->
+                    <h5 class="text-uppercase">Peque Experto</h5>
+                    <p class="display-6 text-primary">$50.000 <small>/ quincena</small></p>
+
+                    <!-- Imagen ilustrativa -->
+                    <img src="images/caja3.png" class="img-fluid img-rounded my-3" alt="Plan Full">
+
+                    <!-- Descripción -->
+                    <p class="p-custom">La experiencia completa.<br><strong>Incluye:</strong></p>
+
+                    <!-- Lista de beneficios -->
+                    <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                        <li>✔ Tres actividades (de todas las areas)</li>
+                        <li>✔ Guía para padres</li>
+                        <li>✔ Cuento infantil</li>
+                        <li>✔ Tomo de "mi primer enciclopedia"</li>
+                        <li>✔ Dibujo para colorear</li>
+                        <li>✔ Calendarios de actividades (de todas las areas)</li>
+                        <li>✔ Beneficio PequePlan con librerias y jugueterias</li>
+                    </ul>
+
+                    <!-- Botón CTA -->
+                    <a href="#" class="btn btn-primary mt-3">Elegir plan</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /PLANES DE SUSCRIPCIÓN -->
+    <!-- SECCIÓN B: Imagen izquierda, texto derecha -->
+    <section class="section-spacing container">
+        <div class="row align-items-center">
+            <img src="images/fondocajas" class="img-fluid img-rounded w-100 rounded" alt="Imagen 1">
+            <!-- Columna de imagen -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="images/actividades.png" class="img-fluid img-rounded" alt="Imagen ilustrativa">
+            </div>
+            <!-- Columna de texto -->
+            <div class="col-lg-6">
+                <h2 class="display-5" class="h2-custom">Actividades que inspiran</h2>
+                <h4 class="dispplay5" class="h4-custom">Arte</h4>
+                <p class="lead-custom">Las manualidades ayudan a los niños a expresar sus imaginación. A través de proyectos artísticos, los pequeños desarrollan la motricidad fina y la capacidad de concentración.</p>
+                <h4 class="dispplay5" class="h4-custom">Cocina</h4>
+                <p class="lead-custom">Cocinar desarrolla la organización, la comprensión de instrucciones y la paciencia. Además, promueve hábitos saludables, autonomía y la participación activa en su alimentación.</p>
+                <h4 class="dispplay5" class="h4-custom">Ciencia</h4>
+                <p class="lead-custom">Los niños aprenden conceptos básicos de física, química o biología de forma divertida. Este tipo de actividades fomenta el pensamiento crítico, resolución de problemas y habilidades clave para su futuro.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN G: Beneficios destacados en cards con íconos de Bootstrap -->
+    <section class="section-spacing container text-center py-5">
+        <h2 class="mb-5 text-uppercase fw-bold" class="h2-custom">¿Por qué elegirnos?</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-4 shadow-sm">
+                    <i class="bi bi-truck fs-1 mb-3 text-primary"></i>
+                    <h5>Entrega rápida</h5>
+                    <p class="p-custom">Recibí tu producto en tiempo récord con envíos ágiles y seguros.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-4 shadow-sm">
+                    <i class="bi bi-person-hearts fs-1 mb-3 text-primary"></i>
+                    <h5>Atención personalizada</h5>
+                    <p class="p-custom">Te ofrecemos actividades que se adapten a tus necesidades.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-4 shadow-sm">
+                    <i class="bi bi-shield-lock fs-1 mb-3 text-primary"></i>
+                    <h5>Seguridad garantizada</h5>
+                    <p class="p-custom">Tu información y tu compra protegidas en cada paso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM: Presentación del equipo -->
+    <section id="team" class="section-spacing container text-center">
+        <h2 class="h2-custom">Nuestro equipo</h2>
+        <p class="p-custom">Detras de cada caja hay un equipo de personas que idearon tu plan.</p>
+        <div class="row mt-5">
+            <!-- Cada columna es un integrante -->
+            <div class="col-md-4 mb-4">
+                <img src="images/staff2.png" class="mb-3" alt="Miembro 1">
+                <h5>Sofía Benítez</h5>
+                <p class="p-custom">Creadora de Actividades</p>
+                <p class="mb-0">Sofía diseña cada actividad pensando en el juego, el aprendizaje y la alegría de los chicos.</p>
+            </div>
+            <!-- Cada columna es un integrante -->
+            <div class="col-md-4 mb-4">
+                <img src="images/staff1.png" class="mb-3" alt="Miembro 1">
+                <h5>Julia Romero</h5>
+                <p class="p-custom">Coordinadora de Contenido y Comunicación</p>
+                <p class="mb-0">Julia se encarga de que cada caja cuente una historia y de que todo llegue claro y lindo.</p>
+            </div>
+            <!-- Cada columna es un integrante -->
+            <div class="col-md-4 mb-4">
+                <img src="images/staff3.png" class="mb-3" alt="Miembro 1">
+                <h5>Martín Acosta</h5>
+                <p class="p-custom">Logística y armado de cajas</p>
+                <p class="mb-0">Martín es quien se asegura de que cada caja esté completa, segura y llegue a tiempo a cada hogar.</p>
+            </div>
+        </div>
+    </section>
+    <!-- /TEAM -->
+
+    <!-- TESTIMONIALS: Opiniones de clientes -->
+    <section class="section-spacing container text-center">
+        <h2 class="h2-custom">Testimonios</h2>
+        <p class="p-custom">Un poco de lo que opinan las familias que se sumaron a PequePlan.</p>
+        <div class="row">
+            <!-- Cada columna es un testimonio -->
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4">
+                    <p class="mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="mb-0">
+                        Mi hija espera la caja con una emoción que no se puede creer. Las actividades son súper claras, traen todo lo que necesitás y encima nos divertimos un montón haciéndolas juntas. <strong>¡Una forma hermosa de compartir tiempo sin pantallas!</strong>
+                    </p>
+                    <footer class="blockquote-footer mt-3">Mariana L. – Mamá de Valentina (5 años)</footer>
+                </blockquote>
+            </div>
+            <!-- Cada columna es un testimonio -->
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4">
+                    <p class="mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="mb-0">
+                        Nos encantó PequePlan desde la primera caja. Las propuestas son creativas, fáciles de hacer y realmente educativas. Juanchi se enganchó mucho con los experimentos de ciencia, y eso que no suele tener tanta paciencia. <strong>¡Muy recomendable!</strong>
+                    </p>
+                    <footer class="blockquote-footer mt-3">Daniel R. – Papá de Juan Ignacio (7 años)</footer>
+                </blockquote>
+            </div>
+            <!-- Cada columna es un testimonio -->
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4">
+                    <p class="mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="mb-0">
+                        Soy docente y siempre estoy buscando actividades que los estimulen en casa. PequePlan me resolvió todo: vienen listas, son seguras y adaptables. Mis hijos hacen cada propuesta a su ritmo, y yo puedo acompañarlos sin volverme loca. <strong>¡Un golazo!</strong>
+                    </p>
+                    <footer class="blockquote-footer mt-3">Florencia V. – Mamá de Juli y Fran (3 y 6 años)</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!-- /TESTIMONIALS -->
+
+    <!-- GALERÍA A: Grid clásico de 3 columnas -->
+    <section class="section-spacing container py-5 text-center">
+        <h2 class="mb-4" class="h2-custom">Galería de actividades</h2>
+        <p class="mb-5">Te mostramos como se ven algunas de las muchas actividades que pueden llegarte con tu pequecaja.</p>
+        <div class="row g-4">
+            <div class="col-md-4"><img src="images/galeria1.png" class="img-fluid img-rounded rounded" alt="Imagen 1"></div>
+            <div class="col-md-4"><img src="images/galeria2.png" class="img-fluid img-rounded rounded" alt="Imagen 2"></div>
+            <div class="col-md-4"><img src="images/galeria3.png" class="img-fluid img-rounded rounded" alt="Imagen 3"></div>
+        </div>
+    </section>
+
+    <!-- FAQS: Preguntas frecuentes -->
+    <section id="faq" class="section-spacing container text-center">
+        <h2 class="h2-custom">Preguntas Frecuentes</h2>
+        <p class="p-custom">Respuestas a dudas comunes.</p>
+        <div class="accordion mt-5" id="faqAccordion">
+            <!-- Ítem de pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        ¿A qué edad están dirigidas las actividades?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        PequePlan está pensado para niños y niñas de entre 3 y 8 años, con opciones de adaptación para distintas edades. En cada actividad se indica el rango de edad recomendado y si necesita ayuda adulta.
+                    </div>
+                </div>
+            </div>
+            <!-- Ítem de pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        ¿Necesito comprar extras para las actividades?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        No. Cada caja viene con todos los materiales necesarios para realizar las actividades propuestas. Solo podrías necesitar algunos elementos básicos del hogar (como tijeras o agua), que indicamos en la guía para padres.
+                    </div>
+                </div>
+            </div>
+            <!-- Ítem de pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        ¿Cuándo recibimos la caja?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Las cajas se envían cada día 1 y 15 del mes a la dirección que elijas por medio de un envio privad de nuestra empresa. Recibirás un aviso cuando salga el envío y una vez entregado. ¡Tu próxima aventura creativa llega directo a casa!
+                    </div>
+                </div>
+            </div>
+            <!-- Ítem de pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        ¿Qué pasa si mi hijo/a nunca hizo manualidades?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ¡No hay problema! Las actividades son simples, guiadas paso a paso y pensadas para principiantes. No se necesita experiencia previa. La idea es aprender jugando, sin frustraciones.
+                    </div>
+                </div>
+            </div>
+            <!-- Ítem de pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                        ¿Puedo pausar o cancelar la suscripción cuando quiera?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Sí, podés pausar o cancelar en cualquier momento desde tu cuenta. No hay compromiso mínimo. Queremos que la experiencia sea flexible y se adapte a las necesidades de tu familia.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /FAQS -->
+    <!-- CONTACT FORM: Formulario de contacto -->
+
+    <section id="contacto" class="contacto-section">
+        <div class="container-fluid d-flex flex-wrap p-0">
+
+            <!-- Columna izquierda con datos de contacto -->
+            <div class="contacto-info d-flex flex-column justify-content-center text-white p-5">
+                <h2>¿Tenés alguna duda?</h2>
+                <p>Acá tenes nuestros contactos</p>
+
+                <div class="mt-4">
+                    <p><i class="bi bi-telephone-fill me-2"></i> +54 1024-1615</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> pequeplanayuda@gmail.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Avenida Siempreviva 742, Springfield</p>
+                </div>
+
+                <div class="mt-4">
+                    <p>Nuestras redes oficiales:</p>
+                    <div class="redes-sociales">
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-twitter me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+                        <i class="bi bi-linkedin me-3"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha con formulario -->
+            <div class="contacto-formulario p-50 flex-grow-50">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control border-0 border-bottom rounded-0" id="nombre">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control border-0 border-bottom rounded-0" id="apellido">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control border-0 border-bottom rounded-0" id="email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control border-0 border-bottom rounded-0" id="telefono">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Seleccione categoría</label>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div>
+                                <input class="form-check-input" type="radio" name="categoria" id="registro" checked>
+                                <label class="form-check-label" for="registro">Registro</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio" name="categoria" id="envio">
+                                <label class="form-check-label" for="envio">Error de envío</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio" name="categoria" id="cambio">
+                                <label class="form-check-label" for="cambio">Cambio de suscripción</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio" name="categoria" id="otros">
+                                <label class="form-check-label" for="otros">Otros</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control border-0 border-bottom rounded-0" id="mensaje" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: Pie de página -->
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-redes">
+                <p>Visita nuestras redes sociales para no perderte ninguna novedad.</p>
+                <div class="iconos-redes">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columnas">
+                <div class="col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#pequecajas">Pequecajas</a></li>
+                        <li><a href="detalle2.html">Suscripción</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Compania</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#">Sedes</a></li>
+                        <li><a href="#">Trabajo</a></li>
+                        <li><a href="#pequeswap">Pequeswap</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Registrarme</a></li>
+                        <li><a href="#">Mi Suscripción</a></li>
+                        <li><a href="#">Mi Cuenta</a></li>
+                        <li><a href="#">Reportar un bug</a></li>
+                        <li><a href="#">Chat de consultas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-base">
+            <p>Copyright © 2025 DG3Belluccia</p>
+            <p>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    <!-- Bootstrap Bundle JS (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Script personalizado para cambiar el navbar al hacer scroll -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+
+    <!-- Scripts adicionales -->
+    <script src="scripts.js"></script>
+</body>
+</html>

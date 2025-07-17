@@ -1,0 +1,807 @@
+/* 1. VARIABLES DE DISEÑO */
+:root {
+    --primary-color: #47b2e4;
+    --secondary-color: #6c757d;
+    --light-color: #FFF9EF;
+    --dark-color: #343a40;
+    --font-family-base: 'Poppins', sans-serif;
+}
+
+/* 2. ESTILOS GENERALES */
+body {
+    font-family: var(--font-family-base);
+    color: #212529;
+    background-color: #FFF9EF;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* 3. NAVBAR */
+.navbar {
+    background-color: #F265D6;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 15px 0;
+}
+
+    .navbar.scrolled {
+        background-color: #F265D6;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #FFF9EF;
+}
+
+.nav-link {
+    color: #FFF9EF;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+    .nav-link:hover {
+        color: #1A5EDB;
+    }
+
+/* 4. HERO */
+.row.p-5 {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding: 60px 20px;
+}
+
+#hero {
+    background-image: url('images/Herofondovershort.png'); /* Usá el nombre correcto y la ruta exacta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
+    padding-top: 160px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #5631A5;
+}
+
+p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Botones */
+.btn,
+.btn-dark,
+.btn-primary {
+    background-color: #43b649 !important; /* Verde vibrante */
+    color: #fff !important;
+    border: none;
+}
+
+    .btn:hover,
+    .btn-dark:hover,
+    .btn-primary:hover {
+        background-color: #368d3a !important; /* Verde más oscuro para hover */
+        color: #fff !important;
+    }
+
+.btn-outline-dark {
+    border: 2px solid #43b649 !important;
+    color: #43b649 !important;
+    background: transparent !important;
+}
+
+    .btn-outline-dark:hover {
+        background-color: #43b649 !important;
+        color: #fff !important;
+        border-color: #43b649 !important;
+    }
+
+/* 5. SECCIONES */
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 20px auto 0;
+}
+
+/* 6. CARDS */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.masonry__container {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
+.masonry__item {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+#pequecajas {
+    background-image: url('images/fondocorto.png'); /* Usá el nombre correcto y la ruta exacta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
+    padding-top: 160px; /* Más espacio arriba */
+    padding-bottom: 160px; /* Más espacio abajo */
+}
+
+#team img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#faq {
+    background-color: #C3D8F5
+}
+
+/* 7. TESTIMONIOS */
+.blockquote {
+  background-color: var(--light-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* 8. FORMULARIO */
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+form button.btn-primary {
+    background-color: #369cc5;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 10px 30px; /* Igual que .btn */
+    width: auto; /* No ocupa todo el ancho */
+    display: block; /* Permite usar margin-left auto */
+    margin-left: 0; /* Alinea a la derecha */
+    margin-right: auto;
+}
+
+/* 9. FOOTER */
+footer {
+  background-color: #F265D6;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-redes {
+    max-width: 250px;
+}
+
+    .footer-redes p {
+        margin-bottom: 15px;
+        color: #fdfdfd;
+    }
+
+/* 10. IMÁGENES */
+img.rounded-circle {
+  border: 5px solid var(--light-color);
+}
+
+/* 11. GALERÍA */
+/* .container .row img {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container .row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+} */
+}
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* TITULOS */
+.h1-custom {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #5631A5;
+}
+
+.h2-custom {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #5631A5;
+}
+
+.h3-custom {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #5631A5;
+}
+
+.h4-custom {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #5631A5;
+}
+
+/* PÁRRAFOS Y TEXTOS */
+.p-custom {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+/* FONDOS E IMÁGENES */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay-light {
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+}
+
+.bg-overlay-dark {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.img-rounded {
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+/* TEXTOS ADICIONALES */
+.text-uppercase-custom {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-muted-custom {
+  color: #6c757d;
+}
+
+/* ESPACIADOS */
+.section-spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-spacing-sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* ============================== */
+/* MEDIA QUERIES */
+/* ============================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .masonry__container {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .masonry__container {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .masonry__container {
+    column-count: 1;
+  }
+}
+/* ============================== */
+/* FIGMA */
+/* ============================== */
+.nosotros {
+    background-color: #fef7ec;
+    padding: 60px 20px;
+    font-family: Poppins, sans-serif;
+}
+
+.contenedor-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.imagen-nosotros {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin-left: 0;
+}
+
+    .imagen-nosotros img {
+        width: 100%;
+        height: auto;
+        border-radius:0px;
+    }
+
+.texto-nosotros {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+    .texto-nosotros h2 {
+        font-size: 2.5em;
+        color: #5f2dad;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .texto-nosotros p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+.beneficios {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fdf8f0;
+    font-family: Poppins, sans-serif;
+}
+
+    .beneficios h2 {
+        font-size: 2.5em;
+        color: #5f2dad;
+        margin-bottom: 50px;
+        font-weight: bold;
+        text-align: center
+    }
+
+.beneficio-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.beneficio-item {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+    .beneficio-item .icono {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 60px;
+        color: white;
+    }
+
+.beneficio-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #1c1c1c;
+}
+
+.beneficio-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+.contacto-section {
+    background-color: #fef7ec;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contacto-info {
+    background-color: #bcd6f5;
+    color: #5f2dad;
+    flex: 1;
+    min-width: 150px;
+}
+
+    .contacto-info h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #5f2dad;
+    }
+
+    .contacto-info p {
+        margin: 0;
+        font-size: 1rem;
+        color: #5f2dad;
+    }
+
+.redes-sociales i {
+    font-size: 1.5rem;
+    color: #5f2dad;
+    cursor: pointer;
+}
+
+.contacto-formulario label {
+    font-weight: 600;
+    color: #5f2dad;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.contacto-formulario .form-check-input:checked {
+    background-color: #5f2dad;
+    border-color: #5f2dad;
+}
+
+.contacto-formulario {
+    margin-left: 40px;
+}
+
+@media (max-width: 991.98px) {
+    .contacto-formulario {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+}
+
+
+.iconos-redes a {
+    color: #6e44b7;
+    font-size: 1.3em;
+    margin-right: 12px;
+    transition: color 0.3s;
+}
+
+    .iconos-redes a:hover {
+        color: #fff;
+    }
+
+.footer-columnas {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.col h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #452b8e;
+}
+
+.col ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .col ul li {
+        margin-bottom: 8px;
+        font-size: 0.95em;
+    }
+
+        .col ul li a {
+            text-decoration: none;
+            color: #fdfdfd;
+            transition: color 0.3s;
+        }
+
+            .col ul li a:hover {
+                color: #fff;
+            }
+
+.contacto i {
+    margin-right: 8px;
+}
+
+hr {
+    margin: 30px auto;
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 90%;
+}
+
+.footer-base {
+    text-align: center;
+    font-size: 0.9em;
+    color: #F265D6;
+}
+
+    .footer-base a {
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 5px;
+        transition: color 0.3s;
+    }
+
+        .footer-base a:hover {
+            color: #e2e2e2;
+        }
+
+
+/* Estilos generales para la página de detalles */
+.detalles-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffaf0;
+}
+
+    /* Header */
+    .detalles-page header {
+        background-color: #f06cd9;
+        padding: 10px 20px;
+    }
+
+        .detalles-page header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+    /* Hero section */
+    .detalles-page .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .detalles-page .section-title {
+        color: #5f2dad;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    .detalles-page .btn-primary {
+        background-color: #1d4ed8;
+        border: none;
+    }
+    #detallehero {
+        background-color: #F4ECC3;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        min-width: 100vw;
+        box-sizing: border-box;
+        padding-top: 100px;
+        padding-bottom: 100px;
+}
+
+    /* Precio destacado */
+    .detalles-page .precio {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    /* Icon boxes */
+    .detalles-page .icon-box {
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        margin: 10px
+    }
+
+#cajacompra .texto-legal {
+    font-size: 0.85em;
+    color: #888;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+#cajacompra .precio {
+    margin-top: 40px;
+}
+
+#cajacompra {
+    background-image: url('images/fondodetallecaja.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+    #pagos img {
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.seguridad {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff7f0;
+    flex-wrap: wrap;
+}
+
+.seguridad-box {
+    flex: 1;
+    min-width: 250px;
+    border-radius: 12px;
+    padding: 24px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+    .seguridad-box h3 {
+        font-size: 20px;
+        margin: 16px 0 8px;
+    }
+
+    .seguridad-box p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: white;
+    }
+
+.icono {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-right: 0;
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.verde {
+    background-color: #a3d44b;
+}
+
+.azul {
+    background-color: #1e61f1;
+}
+
+.rosa {
+    background-color: #f75ac4;
+}
+
+#marcas img {
+    max-width: 140px;
+    height: auto;
+    margin: 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#marcas {
+    background-color: #5631A5 !important; /* O el color que prefieras */
+}
